@@ -28,7 +28,11 @@ jobs:
         run: npm version patch
       - name: Update files to github
         run: git push -u origin master --force
-     
+      - name: Install dependencies
+        run: |
+          npm install
+
+    
       - name: Publish package on NPM 📦
         run: npm publish --force
         env:
