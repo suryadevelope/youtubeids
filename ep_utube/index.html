@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub File Update</title>
+
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script type="module">
+        import { Octokit } from 'https://cdn.skypack.dev/@octokit/rest';
+        globalThis.Octokit = Octokit;
+    </script>
+
+</head>
+<body>
+    <!-- <textarea id="file-content" rows="10" cols="50"></textarea>
+    <button onclick="updateFile()">Update File</button> -->
+
+
+    <div>
+        <p>Add new videos here</p>
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="input-group mb-3">
+                        <input type="text" id="tags-input" class="form-control" placeholder="Enter YouTube video IDs separated by commas">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button" id="validate-button">Validate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div id="thumbnails-container"></div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    <div id="latestvids" style="background-color: rgb(179, 189, 189);margin: 10px;">
+        <p>Latest videos</p>
+    </div>
+    
+    <div id="oldvids"  style="background-color: rgb(174, 181, 172);margin: 10px">
+        <p>old videos</p>
+    
+    </div>
+</body>
+
+    
+<script src="./index.js"></script>
+
+</html>
