@@ -28,10 +28,10 @@ $(document).ready(function () {
       
   // GitHub authentication
   const octokit = new Octokit({
-    auth: "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",
+    auth: "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",
   });
 
-  
+
   // Fetch the file content
   octokit.repos
     .getContent({
