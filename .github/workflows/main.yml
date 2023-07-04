@@ -26,8 +26,8 @@ jobs:
           git config user.email "${{ github.event.pusher.email }}"
       - name: Update NPM version
         run: npm version patch
-      - name: Update files to github
-        run: git push -u origin publish --force
+      # - name: Update files to github
+      #   run: git push -u origin master --force
       - name: Install dependencies
         run: |
           npm install
