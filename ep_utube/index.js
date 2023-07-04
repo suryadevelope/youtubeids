@@ -28,7 +28,7 @@ $(document).ready(function () {
       
   // GitHub authentication
   const octokit = new Octokit({
-    auth: "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",
+    auth: "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",
   });
 
 
