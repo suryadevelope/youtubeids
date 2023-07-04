@@ -27,10 +27,6 @@ jobs:
       - name: Update NPM version
         run: npm version patch
     
-      - name: Push Changes
-        run: |
-          git branch publish
-          git push -u origin publish --force
       - name: Install dependencies
         run: |
           npm install
