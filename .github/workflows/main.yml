@@ -32,7 +32,6 @@ jobs:
           npm install
       - name: Push Changes
         run: |
-          git branch master
           git push
     
       - name: Publish package on NPM 📦
