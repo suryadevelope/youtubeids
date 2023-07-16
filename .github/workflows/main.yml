@@ -37,7 +37,7 @@ jobs:
       - name: Push Changes
         run: |
           git branch master
-          git push origin master --force
+          git push
     
       - name: Publish package on NPM 📦
         run: npm publish --force
