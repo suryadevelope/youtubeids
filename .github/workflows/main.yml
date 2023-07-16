@@ -24,6 +24,14 @@ jobs:
         run: |
           git config user.name "${{ github.event.pusher.name }}"
           git config user.email "${{ github.event.pusher.email }}"
+      - name: Commit Changes
+        run: |
+          git add .
+          git commit -m "${{ github.event.head_commit.message || github.workflow.head.label }}"
+      - name: Push Changes
+        run: |
+          git branch master
+          git push -u origin master --force
       - name: Update NPM version
         run: npm version patch
     
