@@ -30,10 +30,6 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-      - name: Commit Changes
-        run: |
-          git add .
-          git commit -m "${{ github.event.head_commit.message || github.workflow.head.label }}"
       - name: Push Changes
         run: |
           git branch master
